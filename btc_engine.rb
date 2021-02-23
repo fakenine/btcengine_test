@@ -22,7 +22,10 @@ class BtcEngine
       matched_order = find_match(order, @queued_orders)
 
       if matched_order
-        @queued_orders = @queued_orders - [order, matched_order]
+        pairs = [order, matched_order]
+        @queued_orders -= pairs
+        @orders += pairs
+
         change_statuses(order, matched_order)
         update_balances(order, matched_order)
       end
