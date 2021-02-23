@@ -48,7 +48,7 @@ class BtcEngine
 
   def matches?(order, order_to_match)
     order_to_match.id != order.id &&
-      order_to_match.user_id != order.id &&
+      order_to_match.user_id != order.user_id &&
       order_to_match.direction != order.direction &&
       order_to_match.price == order.price
   end
