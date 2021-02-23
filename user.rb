@@ -10,6 +10,22 @@ class User
     validate!
   end
 
+  def increase_btc_balance(btc_amount)
+    @btc_balance += btc_amount
+  end
+
+  def decrease_btc_balance(btc_amount)
+    @btc_balance -= btc_amount
+  end
+
+  def increase_eur_balance(price, btc_amount)
+    @eur_balance += price * btc_amount
+  end
+
+  def decrease_eur_balance(price, btc_amount)
+    @eur_balance -= price * btc_amount
+  end
+
   private
 
   def validate!

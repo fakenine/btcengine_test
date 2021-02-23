@@ -13,6 +13,10 @@ class Order
     validate!
   end
 
+  def executed!
+    @state = 'executed'
+  end
+
   private
 
   def validate!
