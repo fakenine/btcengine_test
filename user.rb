@@ -2,7 +2,7 @@ class User
   attr_reader :id
   attr_accessor :btc_balance, :eur_balance
 
-  def initialize(id, btc_balance, eur_balance)
+  def initialize(id:, btc_balance:, eur_balance:)
     @id = id
     @btc_balance = btc_balance
     @eur_balance = eur_balance
