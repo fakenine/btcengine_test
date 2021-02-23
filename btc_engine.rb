@@ -29,6 +29,14 @@ class BtcEngine
     end
   end
 
+  def serialize
+    {
+      users: @users.map(&:serialize),
+      queued_orders: @queued_orders.map(&:serialize),
+      order: @orders.map(&:serialize)
+    }
+  end
+
   private
 
   def find_match(order, orders_to_match)

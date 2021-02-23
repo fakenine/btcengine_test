@@ -17,6 +17,17 @@ class Order
     @state = 'executed'
   end
 
+  def serialize
+    {
+      id: id,
+      user_id: user_id,
+      direction: direction,
+      btc_amount: btc_amount,
+      price: price,
+      state: state
+    }
+  end
+
   private
 
   def validate!

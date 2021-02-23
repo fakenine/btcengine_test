@@ -26,6 +26,14 @@ class User
     @eur_balance -= price * btc_amount
   end
 
+  def serialize
+    {
+      id: id,
+      btc_balance: btc_balance,
+      eur_balance: eur_balance
+    }
+  end
+
   private
 
   def validate!
