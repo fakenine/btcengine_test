@@ -63,6 +63,6 @@ class BtcEngine
   end
 
   def process_eur_balance(user, direction, btc_amount, price)
-    direction == 'sell' ? user.decrease_eur_balance(price, btc_amount) : user.increase_eur_balance(price, btc_amount)
+    direction == 'sell' ? user.increase_eur_balance(price, btc_amount) : user.decrease_eur_balance(price, btc_amount)
   end
 end
